@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block students-per-subject %}
+{% if messages %}
+{% for message in messages%}
+<h2>{{ message }}</h2>
+{% endfor %}
+{% endif %}
+<ul>
+    <li><a href="http://localhost:8000/list_of_subjects/">Return to menu</a></li>
+</ul>
+<br><br>
+<table style="width:60%">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+{% for upis in data %}
+<td>{{upis.student.first_name}} {{upis.student.last_name}}</td>
+<td>{{upis.student.email}}</td>
+<td>{{upis.student.username}}</td>
+<td>{{upis.student.status}}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

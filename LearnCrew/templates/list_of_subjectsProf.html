@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block subjects_prof %}
+<h2>List of subjects</h2>
+<ul>
+    <li><a href="http://localhost:8000/home/professor/">Return to menu</a></li>
+</ul>
+<br><br>
+<table style="width:60%">
+    <tr>
+        <th>Name</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+{% for subject in data %}
+<td>{{subject.name}}</td>
+<td><a href="http://localhost:8000/list_of_studentsProf/{{subject.id}}">List of students </a></td></tr>
+
+{% endfor %}
+ </table>
+{% endblock %}

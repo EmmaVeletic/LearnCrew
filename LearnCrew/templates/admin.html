@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% if messages %}
+{% for message in messages%}
+<h2>{{ message }}</h2>
+{% endfor %}
+{% endif %}
+<h3>Admin menu</h3>
+<ul>
+<li><a href="http://localhost:8000/list_of_subjects/">Subjects</a></li>
+<li><a href="http://localhost:8000/list_of_professors/">Professors</a></li>
+<li><a href="http://localhost:8000/list_of_students/">Students</a></li>
+<li><a href="http://localhost:8000/logout/">Logout</a></li>
+</ul>
+{% endblock %}

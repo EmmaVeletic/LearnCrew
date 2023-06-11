@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+   .upisni-list{
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 5px;
+      border: 2px solid blue;
+      display: block;
+   }
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+   }
+   .predmeti{
+    margin: 10px;
+
+   }
+   table {
+      border-collapse: separate;
+      width: 70%;
+   }
+
+   th, td {
+      text-align: left;
+      padding: 8px;
+   }
+
+   tr:nth-child(even){background-color: #C7DFF1}
+
+   th {
+      background-color: #0F79C6;
+      color: white;
+   }
+
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #115990;
+   }
+
+   li {
+      float: left;
+   }
+
+   li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+   }
+
+   li a:hover {
+      background-color: #97B6CD;
+   }
+
+   a:link, a:visited {
+      background-color: #115990;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+   }
+
+    a:hover, a:active {
+      background-color: #C7DFF1;
+    }
+    input[type=submit]{
+      background-color: #115990;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+
+   }
+   form{
+       border: 2px solid #115990;
+       border-radius: 10px;
+       padding: 20px;
+       width: 60%;
+       margin: 20px;
+   }
+
+   .main-form{
+      border: 2px solid #115990;
+      padding: 10px;
+      margin: 20px;
+      width: 50%;
+   }
+   .main-form form{
+      border-style: none;
+   }
+   .main-form table tr:nth-child(even){
+      background-color: white;
+   }
+   .main-form table th {
+      background-color: #115990;
+      color: white;
+      padding: 5px 25px;
+   }
+
+   </style>
+</head>
+<body>
+   {% block register %}
+   {% endblock %}
+   {% block login %}
+   {% endblock %}
+   {% block menu %}
+   {% endblock %}
+   {% block subjects-admin %}
+   {% endblock %}
+   {% block subject_form %}
+   {% endblock %}
+   {% block professor_form %}
+   {% endblock %}
+   {% block student_form %}
+   {% endblock %}
+   {% block confirm_deletion %}
+   {% endblock %}
+   {% block students-per-subject %}
+   {% endblock %}
+   {% block subjects_prof %}
+   {% endblock %}
+   {% block students-for-professor %}
+   {% endblock %}
+   {% block student-view %}
+   {% endblock %}
+   {% block admin-view %}
+   {% endblock %}
+   {% block professors-admin %}
+   {% endblock %}
+   {% block students-admin %}
+   {% endblock %}
+
+</body>
+</html>

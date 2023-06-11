@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block admin-view %}
+
+<ul>
+    <li><a href="http://localhost:8000/list_of_students/">Return tu student list</a></li>
+</ul>
+<br>
+<h2>Info</h2>
+<p>{{student.first_name}} {{student.last_name}}</p>
+<p>{{student.email}}</p>
+<p>Student's status is {{student.status}}</p>
+<br>
+<div class="container">
+{% if student.status == "r" %}
+<div class="predmeti">
+    <h1>Enrolled subjects</h1>
+<div class="upisni-list">
+    <h3>First semester</h3>
+    {% for subject in first %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Second semester</h3>
+    {% for subject in second %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Third semester</h3>
+    {% for subject in third %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Forth semester</h3>
+    {% for subject in forth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Fifth semester</h3>
+    {% for subject in fifth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Sixth semester</h3>
+    {% for subject in sixth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+</div>
+{% endif %}
+
+
+{% if student.status == "i" %}
+<div class="predmeti">
+    <h1>Enrolled subjects</h1>
+<div class="upisni-list">
+    <h3>First semester</h3>
+    {% for subject in first %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Second semester</h3>
+    {% for subject in second %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Third semester</h3>
+    {% for subject in third %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Forth semester</h3>
+    {% for subject in forth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Fifth semester</h3>
+    {% for subject in fifth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Sixth semester</h3>
+    {% for subject in sixth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Seventh semester</h3>
+    {% for subject in seventh %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+<div class="upisni-list">
+    <h3>Eighth semester</h3>
+    {% for subject in eighth %}
+    {{subject.predmet}} --{{subject.status}}--<a href="http://localhost:8000/ispis/{{student_id}}/{{subject.predmet.id}}">Ispis</a>
+    <a href="http://localhost:8000/change/{{student_id}}/{{subject.predmet.id}}">Change to polozen</a><br><br>
+    {% endfor %}
+</div>
+</div>
+{% endif %}
+
+
+<div class="predmeti">
+<h1>Unregistered subjects</h1>
+<div class="upisni-list">
+{% for subject in neupisani %}
+    {{subject.name}} {{subject.kod}}--<a href="http://localhost:8000/upis/{{student_id}}/{{subject.id}}">Upis</a><br><br>
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block subject_form %}
+{% if messages %}
+{% for message in messages%}
+<h2>{{ message }}</h2>
+{% endfor %}
+{% endif %}
+
+<ul>
+    <li><a href="http://localhost:8000/list_of_subjects/">Return to list of subjects</a></li>
+</ul>
+<br><br>
+
+<form method="POST">
+    {% csrf_token %}
+    <table>
+    <tr>
+        <td>{{ form.name.label_tag }}</td>
+        <td>{{ form.name }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.kod.label_tag }}</td>
+        <td>{{ form.kod }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.program.label_tag }}</td>
+        <td>{{ form.program }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.ects.label_tag }}</td>
+        <td>{{ form.ects }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.sem_red.label_tag }}</td>
+        <td>{{ form.sem_red }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.sem_izv.label_tag }}</td>
+        <td>{{ form.sem_izv }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.izborni.label_tag }}</td>
+        <td>{{ form.izborni }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.nositelj.label_tag }}</td>
+        <td>{{ form.nositelj }}</td>
+    </tr>
+    </table>
+
+    <input type="submit" value="Submit">
+    </form>
+{% endblock %}

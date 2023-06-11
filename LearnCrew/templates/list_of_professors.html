@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block professors-admin %}
+<ul>
+    <li><a href="http://localhost:8000/add_professor/">Add new professor</a></li>
+    <li><a href="http://localhost:8000/home/admin/">Return to menu</a></li>
+</ul>
+<br><br>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th colspan="2">Details</th>
+    </tr>
+    <tr>
+{% for professor in data %}
+<td>{{professor.first_name}} {{professor.last_name}}</td>
+<td>{{professor.email}}</td>
+<td>{{professor.username}}</td>
+<td><a href="http://localhost:8000/delete_professor/{{professor.id}}">Delete </a></td>
+<td><a href="http://localhost:8000/edit_professor/{{professor.id}}">Edit </a></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

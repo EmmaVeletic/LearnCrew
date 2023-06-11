@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% if messages %}
+{% for message in messages%}
+<h2>{{ message }}</h2>
+{% endfor %}
+{% endif %}
+<h3>Student menu</h3>
+<ul>
+    <li><a href="http://localhost:8000/student_view/{{student_id}}">Enrollment form</a></li>
+    <li><a href="http://localhost:8000/logout/">Logout</a></li>
+</ul>
+{% endblock %}

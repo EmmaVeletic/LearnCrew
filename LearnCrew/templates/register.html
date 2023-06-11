@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block register %}
+<h1 style="color:#115990;">Welcome to Learn Crew</h1>
+<h2>Registration</h2>
+<div class="main-form">
+        <form method="POST">
+        <table>
+        {{form.as_table}}
+        </table>
+        <br>
+        <input type="submit" value="Register">
+        {% csrf_token %}
+        </form>
+        </div>
+{% endblock %}

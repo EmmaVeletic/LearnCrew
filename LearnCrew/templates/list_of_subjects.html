@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block subjects-admin %}
+<ul>
+    <li><a href="http://localhost:8000/add_subject/">Add new subject</a></li>
+    <li><a href="http://localhost:8000/home/admin/">Return to menu</a></li>
+</ul>
+<br><br>
+<table style="width:60%">
+    <tr>
+        <th>Name</th>
+        <th colspan="3">Details</th>
+    </tr>
+    <tr>
+{% for subject in data %}
+<td>{{subject.name}}</td>
+
+<td><a href="http://localhost:8000/delete_subject/{{subject.id}}">Delete </a></td>
+<td><a href="http://localhost:8000/edit_subject/{{subject.id}}">Edit </a></td>
+<td><a href="http://localhost:8000/list_of_studentsSubject/{{subject.id}}">List of students </a></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
